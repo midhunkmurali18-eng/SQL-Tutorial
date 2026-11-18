@@ -27,4 +27,9 @@ COMMIT;
 -- Display student details along with department name
 SELECT * FROM students;
 SELECT * FROM departments;
-SELECT students.student_name,departments.department_name FROM departments JOIN students;
+SELECT students.student_name,departments.department_name FROM departments INNER JOIN students 
+ON students.department_id = departments.department_id;
+
+-- List all courses taught by a specific instructor 
+SELECT * FROM instructors;
+SELECT * FROM courses;
